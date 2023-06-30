@@ -1490,9 +1490,10 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #about {
-	background: #FFFFFF;
+	background: #636060;
 	padding-top: 12rem;
 	padding-bottom: 15rem;
+	color: wheat;
 }
 #about .section-intro {
 	margin-bottom: 3rem;
@@ -1536,7 +1537,7 @@ header .logo a {
 }
 .about-content .info-list li strong {
 	font-family: "poppins-bold", sans-serif;
-	color: #313131;
+	color: #857e7e;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	font-size: 1.5rem;
@@ -1545,7 +1546,7 @@ header .logo a {
 .about-content .info-list li span {
 	display: block;
 	font-family: "poppins-regular", sans-serif;
-	color: #888888;
+	color: #928585;
 	font-size: 1.5rem;
 	line-height: 1;
 }
@@ -1613,14 +1614,23 @@ header .logo a {
 	}
 }
 
+.card4{
+	text-align: center;
+	align-items: center;
+}
+
+
 /** 
  * ===================================================================
  * 12. resume - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
  */
+
+
 #resume {
 	padding-top: 12rem;
+	background-color: #636363;
 	padding-bottom: 12rem;
 }
 
@@ -1657,7 +1667,7 @@ header .logo a {
 	height: 4.8rem;
 	width: 4.8rem;
 	line-height: 4.8rem;
-	background: #313131;
+	background: #131212;
 	border-radius: 50%;
 	text-align: center;
 	color: #FFFFFF;
@@ -1684,11 +1694,15 @@ header .logo a {
 #resume .timeline-header p {
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.6rem;
-	color: #888888;
+	color: #221d1d;
 }
 #resume .timeline-content {
 	margin-left: 35%;
 	padding-left: 60px;
+}
+
+#resume .timeline-content p {
+	color: white
 }
 #resume .timeline-content h4 {
 	position: relative;
@@ -1789,7 +1803,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #portfolio {
-	background: #FFFFFF;
+	background: #232222;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
@@ -1865,6 +1879,9 @@ header .logo a {
 	-webkit-transform: scale(1.05);
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
+}
+.col-twelve h1{
+	color: rgb(113, 103, 103);
 }
 
 /**
@@ -1945,7 +1962,7 @@ header .logo a {
 	display: block;
 	text-align: center;
 	float: left;
-	width: 50%;
+	width: 100%;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -2586,3 +2603,8 @@ footer .footer-social li a {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.main-hobbies h2{
+	text-align: center;
+	color: #cc005f;
+}
