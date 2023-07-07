@@ -1040,7 +1040,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	line-height: 1.25;
 	margin-bottom: 1.2rem;
 }
-.section-intro h5 {
+.section-intro h3 {
 	color: #FF0077;
 	font-size: 1.6rem;
 	line-height: 1.875;
@@ -1504,12 +1504,16 @@ header .logo a {
 	margin-right: -30px;
 	margin-left: -30px;
 }
-.intro-info img {
-	height: 30rem;
-	width: 30rem;
-	border-radius: 10%; 
-	float: center;
-}
+.imgg {
+	max-width: 50%;
+	height: 50%;
+	border-radius: 10%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+ 
+  
 .intro-info .lead {
 	text-align: center;
 	/* padding-left: 13rem; */
@@ -1517,7 +1521,6 @@ header .logo a {
 
 .about-content {
 	position: relative;
-	text-align: left;
 	max-width: 850px;
 	margin-bottom: 3.6rem;
 }
@@ -1879,9 +1882,6 @@ header .logo a {
 	-webkit-transform: scale(1.05);
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
-}
-.col-twelve h1{
-	color: rgb(113, 103, 103);
 }
 
 /**
@@ -2607,4 +2607,12 @@ footer .footer-social li a {
 .main-hobbies h2{
 	text-align: center;
 	color: #cc005f;
+}
+
+.container{
+	text-align: center;
+	align-items: center;
+
+	margin-left: 32%;
+	margin-right: 30%;
 }
