@@ -481,6 +481,11 @@ textarea {
 .col-twelve,
 .col-full {
 	width: 100%;
+	text-align: center;
+}
+
+.col-twelve h2{
+	color: #FF0077;
 }
 
 /**
