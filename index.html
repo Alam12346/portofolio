@@ -1,98 +1,567 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html><html class="no-js" lang="en"> 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Portofolio</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon"> 
-   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
 
 </head>
 
-<body>
+<body id="top">
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
+	<!-- header 
+   ================================================== -->
+   <header>   	
+   	<div class="row">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Portfolio</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Education</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+	   		<div class="logo">
+		         <a href="index.html">Dropdown</a>
+		      </div>		      
 
-    </div>
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
+						<li><a class="smoothscroll"  href="#resume" title="">Education</a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>
+			
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
 
-  </header><!-- End Header -->
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
-      <div class="backrong">
-      <h1>Syukur Sidiq Nur Alam</h1>
-      <h2>Front End Web Developer</h2>
-      <a href="about.html" class="btn-about">About Me</a>
-    </div></div>
-  </section><!-- End Hero -->
+   	<div class="intro-overlay"></div>	
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="fcontainer">
-      <div class="copyright col-lg-7">
-        &copy; <strong><span>Syukur Sidiq Nur Alam</span></strong> 2023
-      </div>
-      <div class="header-social-links col-lg-4">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
-    </div></footer><!-- End  Footer -->
+   	<div class="intro-content">
+   		<div class="row">
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+   			<div class="col-twelve">
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+	   			<h5>Hello</h5>
+	   			<h1>Syukur Sidiq Nur Alam</h1>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">More</a>
+				   <audio autoplay="true" src="url musik" hidden="true">
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+
+   	<ul class="intro-social">        
+         <li><a href="https://www.linkedin.com/in/syukur-sidiq-nur-alam-7454a7250/"><i class="fa fa-linkedin"></i></a></li>
+		 <li><a href="https://web.facebook.com/syukursidiqnuralam.syukursidiqnuralam"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="https://www.instagram.com/ssdiqnlam/"><i class="fa fa-instagram"></i></a></li>
+      </ul> <!-- /intro-social -->      	
+
+   </section> <!-- /intro -->
+
+
+   <!-- about section
+   ================================================== -->
+   <section id="about">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h3>About</h3>
+			   <img src="images/pp.jpg" class="imgg" alt="Profile Picture">
+
+   			<div class="intro-info">
+   				<p class="lead">
+
+				With a passion for technology and a strong educational background, the focus is on contributing skills and knowledge to a dynamic organization. Pursuing an education in Information Technology has resulted in a solid foundation in various IT concepts and technologies. The excitement lies in applying these skills and making a valuable contribution to the success of a team or organization in the IT industry.</p>
+   			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+		<div class="main-hobbies">
+			<h2>Learned programming language</h2>
+			<hr>
+			<div class="container">
+				<div class="row justify-content-center">
+				  <!-- First row -->
+				  <div class="col-sm-4">
+					<div class="card">
+					  <img src="images/html.png" class="card-img-top" alt="HTML">
+					  <div class="card-body">
+						<h5 class="card-title">HTML</h5>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-sm-4">
+					<div class="card">
+					  <img src="images/css-3.png" class="card-img-top" alt="CSS">
+					  <div class="card-body">
+						<h5 class="card-title">CSS</h5>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-sm-4">
+					<div class="card">
+					  <img src="images/java-script.png" class="card-img-top" alt="JavaScript">
+					  <div class="card-body">
+						<h5 class="card-title">JavaScript</h5>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				
+				<div class="row justify-content-center"> <!-- Second row -->
+				  <div class="col-sm-4">
+					<div class="card">
+					  <img src="images/figma.png" class="card-img-top" alt="Figma">
+					  <div class="card-body">
+						<h5 class="card-title">Figma</h5>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-sm-4">
+					<div class="card">
+					  <img src="images/atom.png" class="card-img-top" alt="ReactJs">
+					  <div class="card-body">
+						<h5 class="card-title">ReactJs</h5>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-sm-4">
+					<div class="card">
+					  <img src="images/mysql.png" class="card-img-top" alt="MySql">
+					  <div class="card-body">
+						<h5 class="card-title">MySql</h5>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				
+			  </div>
+			  
+					</div>
+	
+		  <!-- slidder -->
+	
+
+   	</div>
+
+   </section> <!-- /process-->    
+
+
+   <!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Education</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Lithan Education </h3>
+	   					<p>2022 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+						<h4>Seeking to enhance my proficiency</h4>
+
+							<p>The program at Lithan EduCLaaS is being pursued by me in order to enhance my proficiency and skills in Software Engineering and to help me upskill and develop a deeper understanding of the field.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Sekolah Tinggi Teknologi Bandung</h3>
+	   					<p>2022 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>A major in Informatics Engineering is being pursued by me to continue my career advancement.</h4>
+	   					<p>My skills and knowledge in the field of Informatics Engineering are being further advanced through continuing education.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Assalaam Bandung High School</h3>
+	   					<p>2019 - 2022</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Pursuing a Major in Informatics Engineering for Career Advancement</h4>
+						<p>By choosing to major in Software Engineering, you aim to acquire the essential skills and knowledge you need to contribute to the development of innovative software solutions and make a positive impact in the digital world.  </p>
+	   					</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+   	
+   
+	</section> <!-- /features -->
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Portfolio</h5>
+   			<h1>Check Out Some of My Works.</h1>
+
+   			<p class="lead">
+<p>Hello! My portfolio warmly welcomes you. The utmost thrill is in presenting some of my works in the field of IT and website development. Below, you will discover a glimpse of the projects I have been involved in.</p>
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/module1.png" alt="web design">
+	                  <a href="#modal-01" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">ABC learning center</h3>	     					    
+		     					    	 <span class="folio-types">
+											web design
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/modlue2.jpg" alt="Shutterbug">
+	               	<a href="#modal-02" class="overlay">              		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Multiple Choice Question </h3>	     					    
+		     					    	<span class="folio-types">
+		     					       	  java
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/module3.PNG"alt="Clouds">
+	                  <a href="#modal-03" class="overlay">             		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">simple social media Design</h3>	     					    
+		     					    	<span class="folio-types">
+		     					       	  Design website with Axure App
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/eclipse.PNG" alt="simple social media website">
+	                  <a href="#modal-04" class="overlay">                  	                 
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">simple social media website</h3>	     					    
+		     					    	<span class="folio-types">
+		     					       	  Spring Framework
+		     					      </span>		     		
+		     					   </div>  	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->     
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/Picture1.png" alt="">
+	                  <a href="#modal-05" class="overlay">             		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">buying and selling vehicles </h3>	     					    
+		     					    	<span class="folio-types">
+											Spring Framework
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <!-- modal popups - begin
+	            ============================================================= -->
+	            <div id="modal-01" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/module1.png" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>course website</h4>		      
+					      <p>This website aims to help people to learn wherever they are, learning without distractions (having to go to the course).</p>
+
+					      <div class="categories">Web design</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <!-- <a href="https://github.com/Alam12346/lithann/tree/master/Module%20-%201%20BDSE-FED-Front%20End%20Web%20Development/Sumative">Details</a> -->
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-01 -->
+
+				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modlue2.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Multiple Choice Question</h4>		      
+					      <p>This program is designed to implement a multiple-choice question quiz. It prompts the user with a question and presents multiple answer choices. The user can then input their answer, and the program will evaluate whether the answer is correct or incorrect.</p>
+
+					      <div class="categories">Java</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <!-- <a href="https://github.com/Alam12346/lithann/tree/master/Module%20-%202%20BDSE-PFS-Programming%20Foundations/Sumative">Details</a> -->
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-02 -->
+
+				   <div id="modal-03" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/module3.PNG" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>simple social media Design</h4>		      
+					      <p>before I try to make this simple social media project, I try to make the design using Axure application so that I understand what I should make in the future.</p>
+
+					      <div class="categories">Design website with Axure App</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <!-- <a href="https://github.com/Alam12346/lithann/tree/master/Module%20-%203%20BDSE-UIF-UI%20Frameworks/Sumative">Details</a> -->
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-03 -->
+
+				   <div id="modal-04" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/eclipse.PNG" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>simple social media website</h4>		      
+					      <p>the purpose of this website is so that people can get to know people remotely and also get jobs easily.</p>
+
+					      <div class="categories">Spring Framework</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <!-- <a href="https://github.com/Alam12346/lithann/tree/master/Module%20-%205%20BDSE-WDF-Web%20Development%20Foundations/Sumative">Details</a> -->
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-04 -->
+
+				   <div id="modal-05" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/Picture1.png" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>buying and selling vehicles</h4>		      
+					      <p>This simple website aims to make it easy for people to find the car they want or sell it.</p>
+
+					      <div class="categories">Spring Framework</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <!-- <a href="https://github.com/Alam12346/lithann/tree/master/Module%20-%207%20BDSE-ADP-Application%20Development%20And%20Process/Sumative">Details</a> -->
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-05 -->
+
+
+				   <!-- modal popups - end
+	            ============================================================= -->
+
+	         </div> <!-- /portfolio-wrapper --> 
+
+   		</div>  <!-- /twelve -->   
+
+   	</div> <!-- /portfolio-content --> 
+		
+	</section> <!-- /portfolio --> 
+
+
+	
+
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Where to find me</h5>
+
+   			<p>
+				Indonesian, Bandung
+            </p>
+
+   		</div>
+
+   		<div class="col-four tab-full collapse">
+
+   			<div class="icon">
+   				<i class="icon-mail"></i>
+   			</div>
+
+   			<h5>Email Me At</h5>
+
+   			<p>syukursidiqnuralam@gmail.com<br>
+			   			     
+			   </p>
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Call Me At</h5>
+
+   			<p>Phone: (+62) 8383-2879-668<br>
+			   </p>
+
+   		</div>
+   		
+   	</div> <!-- /contact-info -->
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+         <li><a href="https://www.linkedin.com/in/syukur-sidiq-nur-alam-7454a7250/"><i class="fa fa-linkedin"></i></a></li>
+		 <li><a href="https://web.facebook.com/syukursidiqnuralam.syukursidiqnuralam"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="https://www.instagram.com/ssdiqnlam/"><i class="fa fa-instagram"></i></a></li>
+			   </ul> 
+	      		
+	      </div>
+
+      	<!-- <div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>© Copyright Kards 2016.</span> 
+		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
+		         </div>		                  
+	      	</div> -->
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
 
 </body>
 
