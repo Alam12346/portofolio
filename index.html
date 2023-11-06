@@ -36,20 +36,44 @@
 
 	   		<div class="logo">
 		         <a href="index.html">Dropdown</a>
-		      </div>		      
-
+		      </div>
 		   	<nav id="main-nav-wrap">
 					<ul class="main-navigation">
 						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
 						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
 						<li><a class="smoothscroll"  href="#resume" title="">Education</a></li>
 						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>
+						<li>
+							<a  id="play-button" class="smoothscroll" href="#">Music</a>
+				<a id="stop-button" style="display: none;" class="smoothscroll" href="#">Stop</a>
+				<audio id="audio-player" src="Music/enemy.mp3" controls loop style="display: none;"></audio>
+			
+				<script>
+		
+					const audioPlayer = document.getElementById('audio-player');
+						const playButton = document.getElementById('play-button');
+						const stopButton = document.getElementById('stop-button');
+						
+						playButton.addEventListener('click', function() {
+						  audioPlayer.style.display = 'none'; // Menunjukkan elemen audio
+						  audioPlayer.play(); // Memulai pemutaran audio
+						  playButton.style.display = 'none'; // Menyembunyikan tombol "Play"
+						  stopButton.style.display = 'block'; // Menunjukkan tombol "Stop"
+						});
+						
+						stopButton.addEventListener('click', function() {
+						  audioPlayer.pause(); // Menghentikan pemutaran audio
+						  audioPlayer.style.display = 'none'; // Menyembunyikan elemen audio
+						  playButton.style.display = 'block'; // Menunjukkan tombol "Play" kembali
+						  stopButton.style.display = 'none'; // Menghilangkan tombol "Stop"
+						});
+					   </script>
+						</li>
 			
 					</ul>
 				</nav>    		
    		</div>
 		
-   		
    	</div> <!-- /row --> 		
    </header> <!-- /header -->
 
@@ -57,6 +81,7 @@
    ================================================== -->
    <section id="intro">   
  
+	<!-- background grey transparant -->
    	<div class="intro-overlay"></div>	
 
 
@@ -64,32 +89,7 @@
    		<div class="row">
 			
    			<div class="col-twelve">
-				<div class="top-bar2">
-					<button id="play-button">Play</button>
-						<button id="stop-button" style="display: none;">Stop</button>
-						<audio id="audio-player" src="Music/PayungTeduh.mp3" controls loop style="display: none;"></audio>
-					
-						sometimes music can make us feel good	<script>
-				
-							const audioPlayer = document.getElementById('audio-player');
-								const playButton = document.getElementById('play-button');
-								const stopButton = document.getElementById('stop-button');
-								
-								playButton.addEventListener('click', function() {
-								  audioPlayer.style.display = 'none'; // Menunjukkan elemen audio
-								  audioPlayer.play(); // Memulai pemutaran audio
-								  playButton.style.display = 'none'; // Menyembunyikan tombol "Play"
-								  stopButton.style.display = 'block'; // Menunjukkan tombol "Stop"
-								});
-								
-								stopButton.addEventListener('click', function() {
-								  audioPlayer.pause(); // Menghentikan pemutaran audio
-								  audioPlayer.style.display = 'none'; // Menyembunyikan elemen audio
-								  playButton.style.display = 'block'; // Menunjukkan tombol "Play" kembali
-								  stopButton.style.display = 'none'; // Menghilangkan tombol "Stop"
-								});
-							   </script>
-				</div> <!-- /top-bar2 --> 
+			
 	   			<h5>Hello</h5>
 	   			<h1>Syukur Sidiq Nur Alam</h1>
 
@@ -128,7 +128,7 @@
 			   <div class="intro-info">
 				 <div class="arrow-container">
 					<div class="arrow">
-					  <span>CLICK ME &#9660;</span>
+					  <span>CLICK  &#9660;</span>
 					</div>
 				  </div>
 				  

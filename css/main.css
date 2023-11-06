@@ -160,7 +160,7 @@ p.lead {
 	font-family: "lora-regular", serif;
 	font-size: 2rem;
 	line-height: 1.8;
-	color: #888888;
+	color: #ffffff;
 }
 @media only screen and (max-width:768px) {
 	p.lead {
@@ -1107,25 +1107,8 @@ header .top-bar {
 	top: 0;
 }
 
-
- .top-bar2 {
-	color: #cc005f8b;
-	position: fixed;
-	right: 90px;
-	top: 0;
-	border: solid #cc005f8b;
-	padding-right: 3%;
-	border-radius: 2%;
-	margin-top: 2%;
-	display: flex;
-	align-items: center;
-
-}
-
- .top-bar2 button{
-	background-color: #9e2a2a00; 
-	margin-bottom: 0px;
-	 color: #cc005f8b;
+.music{
+	background-color: transparent;
 }
 header .logo {
 	float: left;
@@ -1565,7 +1548,7 @@ header .logo a {
 }
 .about-content .info-list li strong {
 	font-family: "poppins-bold", sans-serif;
-	color: #857e7e;
+	color: #ffffff;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	font-size: 1.5rem;
@@ -1574,7 +1557,7 @@ header .logo a {
 .about-content .info-list li span {
 	display: block;
 	font-family: "poppins-regular", sans-serif;
-	color: #928585;
+	color: #ffffff;
 	font-size: 1.5rem;
 	line-height: 1;
 }
@@ -1722,7 +1705,7 @@ header .logo a {
 #resume .timeline-header p {
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.6rem;
-	color: #221d1d;
+	color: #363030;
 }
 #resume .timeline-content {
 	margin-left: 35%;
@@ -2656,10 +2639,13 @@ box-shadow: #0d0d0d;
 	
 	color: #cc005f;
 }
+.col-twelve p{
+	color: white;
+}
 
 
 .intro-info a:visited {
-	color: #000000;
+	color: #ffffff;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
