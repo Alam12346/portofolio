@@ -1047,33 +1047,35 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  */
 header {
 	position: fixed;
-	width: 50%;
+	top: 0;
+	left: 0;
+	width: 100%;
 	min-height: 66px;
 	z-index: 600;
+	background: rgba(8, 8, 8, 0.95);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 header .row {
 	position: relative;
 	min-height: 66px;
+	max-width: 1200px;
 }
 header .top-bar {
-	display: block;
-	background: #000000;
-	min-width: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 	min-height: 66px;
-	position: absolute;
-	left: 90px;
-	top: 0;
+	position: relative; /* tambahan */
 }
 
 .music{
 	background-color: transparent;
 }
-header .logo {
-	float: left;
-	margin-left: 20px;
-	margin-right: 50px;
-	margin-top: 25px;
-	position: relative;
+/* header .logo {
+	display: flex;
+	align-items: center;
+	flex: 0 0 auto;
 }
 header .logo a {
 	display: block;
@@ -1087,102 +1089,76 @@ header .logo a {
 	height: 15px;
 	background: url("../images/Logo.png") no-repeat center;
 	background-size: 92px 15px;
-}
+} */
 
 /**
- * menu toggle - (_layout.css)
+ * menu toggle (mobile hamburger + visible label) - (_layout.css)
  * ------------------------------------------------------------------- 
  */
 .menu-toggle {
-	float: left;
-	width: 40px;
-	height: 40px;
-	margin-left: 20px;
-	margin-top: 13px;
-	display: block;
-	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex: 0 0 auto;
 }
-.menu-toggle span {
+.hamburger-icon {
 	display: block;
-	background-color: #FF0077;
 	width: 24px;
-	height: 3px;
-	margin-top: -1.5px;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-	position: absolute;
-	right: 8px;
-	top: 50%;
-	bottom: auto;
-	left: auto;
-	-moz-transition: background 0.2s ease-in-out;
-	-o-transition: background 0.2s ease-in-out;
-	-webkit-transition: background 0.2s ease-in-out;
-	-ms-transition: background 0.2s ease-in-out;
-	transition: background 0.2s ease-in-out;
+	height: 16px;
+	position: relative;
+	flex: 0 0 auto;
 }
-.menu-toggle span::before, .menu-toggle span::after {
-	content: '';
-	width: 100%;
-	height: 100%;
-	background-color: inherit;
+.hamburger-icon .bar {
+	display: block;
 	position: absolute;
 	left: 0;
-	-moz-transition-duration: 0.2s, 0.2s;
-	-o-transition-duration: 0.2s, 0.2s;
-	-webkit-transition-duration: 0.2s, 0.2s;
-	-ms-transition-duration: 0.2s, 0.2s;
-	transition-duration: 0.2s, 0.2s;
-	-moz-transition-delay: 0.2s, 0s;
-	-o-transition-delay: 0.2s, 0s;
-	-webkit-transition-delay: 0.2s, 0s;
-	-ms-transition-delay: 0.2s, 0s;
-	transition-delay: 0.2s, 0s;
+	width: 100%;
+	height: 2px;
+	background-color: #FF0077;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
 }
-.menu-toggle span::before {
-	top: -8px;
-	-moz-transition-property: top, transform;
-	-o-transition-property: top, transform;
-	-webkit-transition-property: top, transform;
-	-ms-transition-property: top, transform;
-	transition-property: top, transform;
+.hamburger-icon .bar:nth-child(1) {
+	top: 0;
 }
-.menu-toggle span::after {
-	bottom: -8px;
-	-moz-transition-property: bottom, transform;
-	-o-transition-property: bottom, transform;
-	-webkit-transition-property: bottom, transform;
-	-ms-transition-property: bottom, transform;
-	transition-property: bottom, transform;
+.hamburger-icon .bar:nth-child(2) {
+	top: 50%;
+	margin-top: -1px;
+}
+.hamburger-icon .bar:nth-child(3) {
+	bottom: 0;
+}
+.menu-label {
+	font-family: "poppins-medium", sans-serif;
+	font-size: 1.3rem;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	white-space: nowrap;
 }
 
-/* is clicked */
-.menu-toggle.is-clicked span {
-	background-color: rgba(255, 0, 119, 0);
-}
-.menu-toggle.is-clicked span::before, .menu-toggle.is-clicked span::after {
-	background-color: #ff0077;
-	-moz-transition-delay: 0s, 0.2s;
-	-o-transition-delay: 0s, 0.2s;
-	-webkit-transition-delay: 0s, 0.2s;
-	-ms-transition-delay: 0s, 0.2s;
-	transition-delay: 0s, 0.2s;
-}
-.menu-toggle.is-clicked span::before {
-	top: 0;
+/* is clicked -> animate bars into an X */
+.menu-toggle.is-clicked .hamburger-icon .bar:nth-child(1) {
+	top: 50%;
+	margin-top: -1px;
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-.menu-toggle.is-clicked span::after {
-	bottom: 0;
+.menu-toggle.is-clicked .hamburger-icon .bar:nth-child(2) {
+	opacity: 0;
+}
+.menu-toggle.is-clicked .hamburger-icon .bar:nth-child(3) {
+	bottom: 50%;
+	margin-bottom: -1px;
 	-webkit-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
-/* navigation panel */
+/* navigation panel (mobile dropdown, default) */
 #main-nav-wrap {
 	display: block;
 	width: 100%;
@@ -1202,6 +1178,7 @@ header .logo a {
 	height: auto;
 	clear: both;
 	display: none;
+	list-style: none;
 }
 .main-navigation > li {
 	display: block;
@@ -1228,29 +1205,65 @@ header .logo a {
 
 /**
  * responsive:
- * header styles
+ * header styles - mobile (default, up to 768px)
  * --------------------------------------------------------------- 
  */
-@media only screen and (max-width:1024px) {
-	header .top-bar {
-		left: 60px;
-	}
-}
-@media only screen and (max-width:768px) {
-	header .top-bar {
-		left: 50px;
-	}
-}
 @media only screen and (max-width:600px) {
-	header .top-bar {
-		left: 35px;
+	.menu-label {
+		font-size: 1.15rem;
 	}
 }
 @media only screen and (max-width:400px) {
-	header .top-bar {
-		left: 25px;
+	.menu-label {
+		display: none;
 	}
 }
+
+/**
+ * responsive:
+ * header styles - desktop/tablet, permanent horizontal navbar
+ * --------------------------------------------------------------- 
+ */
+@media only screen and (min-width:769px) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	
+	#main-nav-wrap {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: auto;
+	}
+
+	.main-navigation {
+		display: flex !important;
+		align-items: center;
+		background: transparent;
+		padding: 0;
+		margin: 0;
+		width: auto;
+		clear: none;
+	}
+	.main-navigation > li {
+		display: block;
+		margin-left: 2.8rem;
+	}
+	.main-navigation > li:first-child {
+		margin-left: 0;
+	}
+	.main-navigation li a {
+		padding: 10px 0;
+		font-size: 1.7rem;
+	}
+	.main-navigation li a:hover {
+		padding-left: 0;
+	}
+}
+
 
 
 /** 
@@ -2432,6 +2445,58 @@ header .logo a {
 	color: #FF0077;
 }
 
+/* new 2-column contact layout: form (left) + details/social (right) */
+.contact-columns {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+.contact-columns:before, .contact-columns:after {
+	content: none;
+}
+.contact-form-col {
+	margin-bottom: 3rem;
+}
+.contact-details-col {
+	padding-top: .6rem;
+}
+.contact-detail-item {
+	margin-bottom: 3.6rem;
+}
+.contact-detail-item .icon i {
+	font-size: 3rem;
+	color: #FF0077;
+	margin-bottom: .9rem;
+	display: inline-block;
+}
+.contact-detail-item h5 {
+	color: #FF0077;
+	margin-bottom: .6rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+}
+.contact-detail-item p {
+	color: rgba(255, 255, 255, 0.7);
+	margin: 0;
+}
+.contact-social {
+	margin: 0;
+	padding: 0;
+	font-size: 2.1rem;
+	list-style: none;
+}
+.contact-social li {
+	display: block;
+	margin: 0 0 1.2rem;
+	padding: 0;
+}
+.contact-social li a, .contact-social  a:visited {
+	color: #FFFFFF;
+}
+.contact-social li a:hover, .contact-social  a:focus {
+	color: #FF0077;
+}
+
 /**
  * loader animation - (_layout.scss)
  * --------------------------------------------------------------- 
@@ -2589,6 +2654,31 @@ footer .footer-social li a {
 	background: #000000;
 }
 
+/**
+ * scroll reveal animation
+ * --------------------------------------------------------------- 
+ */
+.reveal {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+	            transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* dipakai untuk membuat beberapa elemen muncul berurutan (staggered) */
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+.reveal-delay-4 { transition-delay: 0.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal { opacity: 1; transform: none; transition: none; }
+}
+
 /*# sourceMappingURL=main.css.map */
 
 .main-hobbies h2{
@@ -2675,3 +2765,5 @@ box-shadow: #0d0d0d;
 .audio{
 	margin-bottom: 100px;
 }
+
+

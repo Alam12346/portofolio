@@ -190,6 +190,8 @@
 	/*---------------------------------------------------- */
   	/* Smooth Scrolling
   	------------------------------------------------------ */
+  	var headerOffset = 80; // roughly matches the fixed navbar's height, keeps section headings from hiding underneath it
+
   	$('.smoothscroll').on('click', function (e) {
 	 	
 	 	e.preventDefault();
@@ -197,8 +199,10 @@
    	var target = this.hash,
     	$target = $(target);
 
+    	if (!$target.length) { return; }
+
     	$('html, body').stop().animate({
-       	'scrollTop': $target.offset().top
+       	'scrollTop': $target.offset().top - headerOffset
       }, 800, 'swing', function () {
       	window.location.hash = target;
       });
@@ -216,51 +220,50 @@
 	/*	contact form
 	------------------------------------------------------ */
 
-	/* local validation */
-	$('#contactForm').validate({
+	/* contact form - sends straight to Gmail, no backend required */
+	$('#contactForm').on('submit', function(e) {
 
-		/* submit via ajax */
-		submitHandler: function(form) {
+		e.preventDefault();
 
-			var sLoader = $('#submit-loader');
+		var form = $(this);
+		var sLoader = $('#submit-loader');
 
-			$.ajax({      	
+		// turn the form fields into a plain object for FormSubmit's JSON endpoint
+		var formData = {};
+		$.each(form.serializeArray(), function() {
+			formData[this.name] = this.value;
+		});
 
-		      type: "POST",
-		      url: "inc/sendEmail.php",
-		      data: $(form).serialize(),
-		      beforeSend: function() { 
+		$('#message-warning').hide();
+		$('#message-success').hide();
+		sLoader.fadeIn();
 
-		      	sLoader.fadeIn(); 
+		$.ajax({
 
-		      },
-		      success: function(msg) {
+			type: "POST",
+			url: "https://formsubmit.co/ajax/syukursidiqnuralam@gmail.com",
+			contentType: "application/json; charset=utf-8",
+			data: JSON.stringify(formData),
+			dataType: "json",
 
-	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
-	            }
+			success: function() {
 
-		      },
-		      error: function() {
+				sLoader.fadeOut();
+				form[0].reset();
+				form.fadeOut();
+				$('#message-success').fadeIn();
 
-		      	sLoader.fadeOut(); 
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
+			},
 
-		      }
+			error: function() {
 
-	      });     		
-  		}
+				sLoader.fadeOut();
+				$('#message-warning').html("Something went wrong. Please try again, or email me directly.");
+				$('#message-warning').fadeIn();
+
+			}
+
+		});
 
 	});
 
@@ -287,5 +290,32 @@
 		}		
 
 	});		
+/*---------------------------------------------------- */
+/*  Scroll reveal animation
+------------------------------------------------------ */
+var revealEls = document.querySelectorAll('.reveal');
 
+if ('IntersectionObserver' in window && revealEls.length) {
+
+	var revealObserver = new IntersectionObserver(function(entries, observer) {
+		entries.forEach(function(entry) {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('is-visible');
+				observer.unobserve(entry.target); // cukup animasi sekali saja
+			}
+		});
+	}, {
+		threshold: 0.15,
+		rootMargin: '0px 0px -60px 0px' // mulai animasi sedikit sebelum elemen full terlihat
+	});
+
+	revealEls.forEach(function(el) {
+		revealObserver.observe(el);
+	});
+
+} else {
+	revealEls.forEach(function(el) {
+		el.classList.add('is-visible'); // fallback: langsung tampil kalau browser tidak support
+	});
+}
 })(jQuery);
