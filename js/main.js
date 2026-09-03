@@ -290,32 +290,42 @@
 		}		
 
 	});		
-/*---------------------------------------------------- */
-/*  Scroll reveal animation
------------------------------------------------------- */
-var revealEls = document.querySelectorAll('.reveal');
 
-if ('IntersectionObserver' in window && revealEls.length) {
 
-	var revealObserver = new IntersectionObserver(function(entries, observer) {
-		entries.forEach(function(entry) {
-			if (entry.isIntersecting) {
-				entry.target.classList.add('is-visible');
-				observer.unobserve(entry.target); // cukup animasi sekali saja
-			}
-		});
-	}, {
-		threshold: 0.15,
-		rootMargin: '0px 0px -60px 0px' // mulai animasi sedikit sebelum elemen full terlihat
-	});
+/*----------------------------------------------------*/
+/* Scroll Reveal Animation (Intersection Observer)    */
+/*----------------------------------------------------*/
+(function() {
+    "use strict";
 
-	revealEls.forEach(function(el) {
-		revealObserver.observe(el);
-	});
+    // Ambil semua elemen dengan class .reveal
+    var revealEls = document.querySelectorAll('.reveal');
 
-} else {
-	revealEls.forEach(function(el) {
-		el.classList.add('is-visible'); // fallback: langsung tampil kalau browser tidak support
-	});
-}
+    // Jika browser tidak mendukung IntersectionObserver, langsung tampilkan semuanya
+    if (!('IntersectionObserver' in window)) {
+        revealEls.forEach(function(el) {
+            el.classList.add('is-visible');
+        });
+        return;
+    }
+ 	// console.log('Reveal initialized, total:', revealEls.length); 
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Hanya animasi sekali, lalu lepaskan observer
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px' // mulai animasi sedikit sebelum elemen masuk penuh
+    });
+
+    revealEls.forEach(function(el) {
+        observer.observe(el);
+    });
+})();
+
 })(jQuery);
