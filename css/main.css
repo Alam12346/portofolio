@@ -1004,8 +1004,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .section-intro h3 {
 	color: #FF0077;
-	font-size: 1.6rem;
-	line-height: 1.875;
+	font-size: 1.2rem;
+	line-height: 1.275;
 	margin-bottom: 0.3rem;
 	letter-spacing: .4rem;
 }
@@ -1416,6 +1416,29 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
+	color: #cc005f;
+}
+
+
+.intro-learn {
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	/* bottom: 7.2rem; */
+	font-size: 3.3rem;
+	margin: 0;
+	padding: 0;
+}
+.intro-learn li {
+	display: inline-block;
+	margin: 0 20px;
+	padding: 0;
+}
+.intro-learn li a, .intro-learn li a:visited {
+	color: #FFFFFF;
+}
+.intro-learn li a:hover, .intro-learn li a:focus {
 	color: #cc005f;
 }
 
