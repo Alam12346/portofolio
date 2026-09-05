@@ -1425,15 +1425,13 @@ header .logo a {
 	position: absolute;
 	width: 100%;
 	left: 0;
-	/* bottom: 7.2rem; */
 	font-size: 3.3rem;
-	margin: 0;
 	padding: 0;
 }
 .intro-learn li {
 	display: inline-block;
 	margin: 0 20px;
-	padding: 0;
+	padding-top: 3.2rem;
 }
 .intro-learn li a, .intro-learn li a:visited {
 	color: #FFFFFF;
@@ -1669,6 +1667,7 @@ header .logo a {
 
 #resume .resume-timeline {
 	max-width: 980px;
+	padding-top: 3rem;
 }
 #resume .timeline-wrap {
 	position: relative;
