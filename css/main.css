@@ -1422,7 +1422,7 @@ header .logo a {
 
 .intro-learn {
 	display: block;
-	position: absolute;
+	/* position: absolute; */
 	width: 100%;
 	left: 0;
 	font-size: 3.3rem;
