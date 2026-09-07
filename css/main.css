@@ -1177,7 +1177,7 @@ header .logo a {
 	width: 100%;
 	height: auto;
 	clear: both;
-	display: none;
+	/* display: none; */
 	list-style: none;
 }
 .main-navigation > li {
